@@ -3,3 +3,6 @@ item.tutorialmod:cheeseburger.name=Cheeseburger
 
 //Blocks
 tile.tutorialmod:PathLight.name=Path Light
+
+//Creative Tab
+itemGroup.tutorialmod=Tutorial Mod
