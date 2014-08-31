@@ -1,6 +1,7 @@
 package com.noam.tutorialmod;
 
 import com.noam.tutorialmod.handler.ConfigurationHandler;
+import com.noam.tutorialmod.init.ModBlocks;
 import com.noam.tutorialmod.init.ModItems;
 import com.noam.tutorialmod.reference.*;
 import com.noam.tutorialmod.utility.LogHelper;
@@ -30,6 +31,7 @@ public class TutorialMod
         LogHelper.info("Pre Init Complete!");
 
         ModItems.init();
+        ModBlocks.init();
     }
 
     @Mod.EventHandler
