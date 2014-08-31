@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 
 public class CreativeTabTM
 {
-    public static final CreativeTabs TM_TAB = new CreativeTabs(Reference.MOD_ID)
+    public static final CreativeTabs TM_TAB = new CreativeTabs(Reference.MOD_ID.toLowerCase())
     {
 
         @Override
@@ -15,10 +15,5 @@ public class CreativeTabTM
             return ModItems.cheeseburger;
         }
 
-        @Override
-        public String getTranslatedTabLabel()
-        {
-            return "Tutorial Mod";
-        }
     };
 }
