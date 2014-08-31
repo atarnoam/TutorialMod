@@ -3,6 +3,7 @@ package com.noam.tutorialmod;
 import com.noam.tutorialmod.handler.ConfigurationHandler;
 import com.noam.tutorialmod.reference.*;
 import com.noam.tutorialmod.utility.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -24,6 +25,7 @@ public class TutorialMod
     public void preInit(FMLPreInitializationEvent event)
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Init Complete!");
     }
 
