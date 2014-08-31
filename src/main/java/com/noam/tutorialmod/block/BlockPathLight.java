@@ -1,5 +1,6 @@
 package com.noam.tutorialmod.block;
 
+
 public class BlockPathLight extends BlockTM
 {
     public BlockPathLight()

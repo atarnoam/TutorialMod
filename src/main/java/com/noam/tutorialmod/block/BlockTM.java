@@ -1,5 +1,6 @@
 package com.noam.tutorialmod.block;
 
+import com.noam.tutorialmod.creativetab.CreativeTabTM;
 import com.noam.tutorialmod.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -17,6 +18,8 @@ public class BlockTM extends Block
     public BlockTM()
     {
         this(Material.rock);
+        this.setCreativeTab(CreativeTabTM.TM_TAB);
+
     }
 
     @Override

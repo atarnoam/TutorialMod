@@ -1,5 +1,6 @@
 package com.noam.tutorialmod.item;
 
+import com.noam.tutorialmod.creativetab.CreativeTabTM;
 import com.noam.tutorialmod.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,6 +13,8 @@ public class ItemTM extends Item
     public ItemTM()
     {
         super();
+        this.setCreativeTab(CreativeTabTM.TM_TAB);
+
     }
 
     @Override
