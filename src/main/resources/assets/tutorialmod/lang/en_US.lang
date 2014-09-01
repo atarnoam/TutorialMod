@@ -4,5 +4,10 @@ item.tutorialmod:cheeseburger.name=Cheeseburger
 //Blocks
 tile.tutorialmod:PathLight.name=Path Light
 
-//Creative Tab
+//Creative Tabs
 itemGroup.tutorialmod=Tutorial Mod
+
+//Keys
+keys.tutorialmod.category=Tutorial Mod
+keys.tutorialmod.charge=Charge
+keys.tutorialmod.release=Release

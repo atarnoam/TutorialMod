@@ -1,5 +1,6 @@
 package com.noam.tutorialmod;
 
+import com.noam.tutorialmod.client.handler.KeyInputEventHandler;
 import com.noam.tutorialmod.handler.ConfigurationHandler;
 import com.noam.tutorialmod.init.*;
 import com.noam.tutorialmod.reference.*;
@@ -27,8 +28,12 @@ public class TutorialMod
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+
+        proxy.registerKeyBindings();
+
         ModItems.init();
         ModBlocks.init();
+
 
         LogHelper.info("Pre Init Complete!");
     }
@@ -37,6 +42,8 @@ public class TutorialMod
     public void init(FMLInitializationEvent event)
     {
         Recipes.init();
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
+
 
         LogHelper.info("Init Complete!");
     }
