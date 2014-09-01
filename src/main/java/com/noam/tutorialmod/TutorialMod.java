@@ -1,8 +1,7 @@
 package com.noam.tutorialmod;
 
 import com.noam.tutorialmod.handler.ConfigurationHandler;
-import com.noam.tutorialmod.init.ModBlocks;
-import com.noam.tutorialmod.init.ModItems;
+import com.noam.tutorialmod.init.*;
 import com.noam.tutorialmod.reference.*;
 import com.noam.tutorialmod.utility.LogHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -28,15 +27,17 @@ public class TutorialMod
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-        LogHelper.info("Pre Init Complete!");
-
         ModItems.init();
         ModBlocks.init();
+
+        LogHelper.info("Pre Init Complete!");
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        Recipes.init();
+
         LogHelper.info("Init Complete!");
     }
 
